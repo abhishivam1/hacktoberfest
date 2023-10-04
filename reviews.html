@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>REVIEWS</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.css">
+	
+  
+
+
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="icon" type="image/x-icon" href="/img/icon.jpg">
+
+<link rel="stylesheet" href="/css/style1.css">
+     <script src="https://kit.fontawesome.com/3443a4ca80.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+
+
+
+    <nav>
+      <img src="img/icon.png" class="logo">
+      <ul id="sidemenu">
+        <li><a href="index.html">Home</a> </li>
+        <li><a href="works.html">Works</a> </li>
+        <li><a href="reviews.html">Reviews</a> </li>
+        <li><a href="#contact ">Contact</a> </li>
+        <i class="fas fa-times"  onclick="Closemenu()"></i>
+      </ul>
+      <i class="fas fa-bars" onclick="Openmenu()"></i>
+    </nav>
+          
+    <br><br><br>
+
+    <div class="container">
+      <div class="row">
+        <div class="gallery">
+          <figure>
+            <img src="/img/rv/1.png" alt="" />
+          
+          </figure>
+          <figure>
+            <img src="/img/rv/2.png" alt="" />
+          
+          </figure>
+          <figure>
+            <img src="/img/rv/3.png" alt="" />
+            
+          </figure>
+          <figure>
+            <img src="/img/rv/4.png" alt="" />
+            
+          </figure>
+          <figure>
+            <img src="/img/rv/5.png" alt="" />
+            
+          </figure>
+          <figure>
+            <img src="/img/rv/6.png" alt="" />
+
+          </figure>
+          <figure>
+            <img src="/img/rv/7.png" alt="" />
+            
+          </figure>
+          <figure>
+            <img src="/img/rv/8.png" alt="" />
+            
+          </figure>
+          <figure>
+            <img src="/img/rv/9.png" alt="" />
+            
+          </figure>
+          <figure>
+            <img src="/img/rv/10.png" alt="" />
+            
+          </figure>
+          <figure>
+            <img src="/img/rv/11.png" alt="" />
+   
+          </figure>
+          <figure>
+            <img src="/img/rv/12.png" alt="" />
+
+          </figure>
+
+
+          <figure>
+            <img src="/img/rv/13.png" alt="" />
+
+          </figure>
+          <figure>
+            <img src="/img/rv/14.png" alt="" />
+
+          </figure>
+          <figure>
+            <img src="/img/rv/15.png" alt="" />
+            
+          </figure>
+
+
+
+        </div>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none;">
+          <symbol id="close" viewBox="0 0 18 18">
+            <path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M9,0.493C4.302,0.493,0.493,4.302,0.493,9S4.302,17.507,9,17.507
+              S17.507,13.698,17.507,9S13.698,0.493,9,0.493z M12.491,11.491c0.292,0.296,0.292,0.773,0,1.068c-0.293,0.295-0.767,0.295-1.059,0
+              l-2.435-2.457L6.564,12.56c-0.292,0.295-0.766,0.295-1.058,0c-0.292-0.295-0.292-0.772,0-1.068L7.94,9.035L5.435,6.507
+              c-0.292-0.295-0.292-0.773,0-1.068c0.293-0.295,0.766-0.295,1.059,0l2.504,2.528l2.505-2.528c0.292-0.295,0.767-0.295,1.059,0
+              s0.292,0.773,0,1.068l-2.505,2.528L12.491,11.491z"/>
+          </symbol>
+        </svg>
+
+
+        <script>
+          var sidemenu= document.getElementById("sidemenu");
+  
+          function Openmenu(){
+              sidemenu.style.right= "0";
+          }
+          function Closemenu(){
+              sidemenu.style.right= "-200px";
+          }
+      </script>
+
+        <script>
+            popup = {
+          init: function(){
+            $('figure').click(function(){
+              popup.open($(this));
+            });
+            
+            $(document).on('click', '.popup img', function(){
+              return false;
+            }).on('click', '.popup', function(){
+              popup.close();
+            })
+          },
+          open: function($figure) {
+            $('.gallery').addClass('pop');
+            $popup = $('<div class="popup" />').appendTo($('body'));
+            $fig = $figure.clone().appendTo($('.popup'));
+            $bg = $('<div class="bg" />').appendTo($('.popup'));
+            $close = $('<div class="close"><svg><use xlink:href="#close"></use></svg></div>').appendTo($fig);
+            $shadow = $('<div class="shadow" />').appendTo($fig);
+            src = $('img', $fig).attr('src');
+            $shadow.css({backgroundImage: 'url(' + src + ')'});
+            $bg.css({backgroundImage: 'url(' + src + ')'});
+            setTimeout(function(){
+              $('.popup').addClass('pop');
+            }, 10);
+          },
+          close: function(){
+            $('.gallery, .popup').removeClass('pop');
+            setTimeout(function(){
+              $('.popup').remove()
+            }, 100);
+          }
+        }
+        
+        popup.init()
+        
+        </script>
+          </div>
+        </div>
+  </body>
+</html>
